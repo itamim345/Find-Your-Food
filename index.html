@@ -11,19 +11,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="#">FoodFinder</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Foods</a>
+              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#">About</a>
+            </div>
+          </div>
+        </div>
+      </nav>
     <div class="container">
-        <h2 class="text-center">----Get Your Favourite Foods----</h2>
+        <h2 class="text-center text-danger">----Get Your Favourite Foods----</h2>
     <!-- search food -->
-        <div class="input-group my-3 w-50 mx-auto">
-            <input id="input-filed" type="text" class="form-control" placeholder="search your food item here" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-secondary" type="button" id="button-addon2">Search</button>
+        <div class="input-group justify-content-center my-3 mx-auto">
+            <form class="d-flex">
+                <input id="input-filed" class="form-control me-2" type="search" placeholder="search your food item" aria-label="Search">
+                <button class="btn btn-primary" type="submit" id="button-addon2">Search</button>
+            </form>
+            <!-- <input id="input-filed" type="text" class="form-control" placeholder="search your food item here" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-secondary" type="button" id="button-addon2">Search</button> -->
         </div>
     <!-- foods showing area -->
-        <div id="show-foods" class="row row-cols-1 row-cols-md-3 g-4">
-            
-        </div>
+        <div id="show-foods" class="row row-cols-1 row-cols-md-3 g-4"></div>
     </div>
-
+    <!-- footer area -->
+    <footer class="py-3 mt-5 bg-primary text-white">
+        <p class="text-center">&copy2022 | All Right Reserved</p>
+        <p class="text-center">Made with <span style="color: #e25555;">❤</span> By <a href="#" class="text-warning">AF Tamim</a></p>
+    </footer>
 
 
 

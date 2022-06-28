@@ -1,6 +1,8 @@
 document.getElementById('button-addon2').addEventListener('click', () => {
-    let inputValue = document.getElementById('input-filed').value;
+    let inputfield = document.getElementById('input-filed');
+    let inputValue = inputfield.value;
     let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`
+    inputfield.value = '';
     fetch(url)
     .then (resp => resp.json())
     .then(data => displayFood(data.meals))
@@ -13,7 +15,7 @@ function displayFood (foods) {
        let div = document.createElement('div');
        div.classList.add('col');
        div.innerHTML = `
-                        <div class="card">
+                        <div class="card h-100">
                             <img src="${food.strMealThumb}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">${food.strMeal}</h5>
@@ -23,6 +25,7 @@ function displayFood (foods) {
                                 <li class="list-group-item">Place of origin:- ${food.strArea}</li>
                                 <li class="list-group-item">Food Catagory:- ${food.strCategory}</li>
                             </ul>
+                            <a href="${food.strYoutube}" target="_blank"class="btn btn-primary w-100 mx-auto">Get Recipe</a> 
                         </div>  
                     `
         wrapper.appendChild(div);
