@@ -2,6 +2,7 @@ document.getElementById('button-addon2').addEventListener('click', () => {
     let inputfield = document.getElementById('input-filed');
     let inputValue = inputfield.value;
     let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`
+    console.log(url);
     inputfield.value = '';
     fetch(url)
     .then (resp => resp.json())
@@ -9,8 +10,8 @@ document.getElementById('button-addon2').addEventListener('click', () => {
 })
 
 function displayFood (foods) {
-    console.log(foods);
     let wrapper =  document.getElementById('show-foods');
+    wrapper.innerHTML = '';
     for (let food of foods) {
        let div = document.createElement('div');
        div.classList.add('col');
